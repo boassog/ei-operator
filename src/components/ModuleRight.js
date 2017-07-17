@@ -9,8 +9,16 @@ export default class ModuleRight extends Component {
   constructor (props: Object) {
     super(props)
     this.state = {
-      isOnHold: true
+      isOnHold: true,
+      curTime: 0
     }
+  }
+  componentWillMount(){
+    setInterval(function(){
+        this.setState({
+            curTime: new Date().toLocaleString()
+        })
+    }.bind(this), 1000);
   }
   render () {
     var onHold;
@@ -21,6 +29,9 @@ export default class ModuleRight extends Component {
     }
     return (
       <View style={[styles.module, onHold]}>
+        <Text style={styles.hour}>
+          {this.state.curTime}
+        </Text>
       </View>
     );
   }
@@ -38,4 +49,10 @@ const styles = StyleSheet.create({
   payment: {
     backgroundColor: '#00B94A',
   },
+  hour: {
+    fontSize: 80,
+    fontWeight: '800',
+    fontFamily: 'System',
+    color: '#212121',
+  }
 });
