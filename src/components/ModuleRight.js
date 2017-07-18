@@ -5,6 +5,8 @@ import {
   View
 } from 'react-native';
 
+import AppStyles from '../Styles/styles';
+
 export default class ModuleRight extends Component {
   constructor (props: Object) {
     super(props)
@@ -14,10 +16,10 @@ export default class ModuleRight extends Component {
     }
   }
   componentWillMount(){
-    var hourFormat = { hour: 'numeric', minute: 'numeric'};
+    var hourFormat = {hour: '2-digit', minute: '2-digit'};
     setInterval(function(){
         this.setState({
-            curTime: new Date().toLocaleString('en-GB', hourFormat)
+            curTime: new Date().toLocaleTimeString('en-GB', hourFormat)
         })
     }.bind(this), 1000);
   }
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 3,
+    borderRadius: AppStyles.generalLayout.borderRadius,
   },
   hold: {
     backgroundColor: '#BBC3C3',
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00B94A',
   },
   hour: {
-    fontSize: 120,
+    fontSize: 90,
     fontWeight: '800',
     fontFamily: 'System',
     color: '#212121',

@@ -6,8 +6,11 @@ import {
   Text,
   Platform,
   StatusBar,
-  View
+  View,
+  Keyboard
 } from 'react-native';
+
+import AppStyles from '../Styles/styles';
 
 import ModuleRight from '../components/ModuleRight';
 import ContentType from '../components/ContentType';
@@ -29,15 +32,17 @@ export default class eioperator extends Component {
             <View style={styles.contentField}>
               <TextInput style = {styles.field}
                 onChangeText = {(text) => this.setState({text})}
-                placeholderTextColor = '#555555'
-                placeholder = "MTI 970"
+                placeholderTextColor = {'#555555'}
+                placeholder = {"MTI 970"}
                 // value={this.state.text}
-                keyboardAppearance = 'dark'
-                returnKeyType = 'search'
+                keyboardAppearance = {'dark'}
+                returnKeyType = {'search'}
                 keyboardType = {'ascii-capable'}
-                autoCapitalize = 'characters'
                 clearButtonMode = 'never'
                 autoCorrect = {false}
+                autoCapitalize = {'characters'}
+                maxLength={9}
+                onSubmitEditing={Keyboard.dismiss}
               />
             </View>
             <View style={styles.contentType}>
@@ -89,7 +94,7 @@ const styles = StyleSheet.create({
   contentField: {
     flex: 2,
     backgroundColor: '#2F3335',
-    borderRadius: 3,
+    borderRadius: AppStyles.generalLayout.borderRadius,
     marginLeft: 2.5,
     marginRight: 2.5,
     marginBottom: 2.5,

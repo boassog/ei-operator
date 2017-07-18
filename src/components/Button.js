@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 // import isEqual from 'lodash.isequal';
 
+import AppStyles from '../Styles/styles';
+
 const Button = React.createClass({
   propTypes: {
     textStyle: Text.propTypes.style,
@@ -128,7 +130,7 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 3,
+    borderRadius: AppStyles.generalLayout.borderRadius,
     alignSelf: 'stretch',
     justifyContent: 'center',
     backgroundColor: '#373C3E',
@@ -138,7 +140,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
   },
   spinner: {
     alignSelf: 'center',
