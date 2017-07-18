@@ -28,10 +28,17 @@ export default class eioperator extends Component {
         <View style={styles.top}>
           <View style={styles.sideLeft}>
             <View style={styles.contentField}>
-              <TextInput style={styles.field}
-                onChangeText={(text) => this.setState({text})}
-                value={this.state.text}
-                keyboardAppearance='dark'
+              <TextInput style = {styles.field}
+                onChangeText = {(text) => this.setState({text})}
+                placeholderTextColor = '#555555'
+                placeholder = "MTI 970"
+                // value={this.state.text}
+                keyboardAppearance = 'dark'
+                returnKeyType = 'search'
+                keyboardType = {'ascii-capable'}
+                autoCapitalize = 'characters'
+                clearButtonMode = 'never'
+                autoCorrect = {false}
               />
             </View>
             <View style={styles.contentType}>
@@ -90,6 +97,7 @@ const styles = StyleSheet.create({
   },
   field: {
     flex: 1,
+    fontSize: 80,
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
