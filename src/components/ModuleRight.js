@@ -10,13 +10,14 @@ export default class ModuleRight extends Component {
     super(props)
     this.state = {
       isOnHold: true,
-      curTime: 0
+      curTime: '00:00'
     }
   }
   componentWillMount(){
+    var hourFormat = { hour: 'numeric', minute: 'numeric'};
     setInterval(function(){
         this.setState({
-            curTime: new Date().toLocaleString()
+            curTime: new Date().toLocaleString('en-GB', hourFormat)
         })
     }.bind(this), 1000);
   }
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 3,
   },
   hold: {
     backgroundColor: '#BBC3C3',
@@ -50,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00B94A',
   },
   hour: {
-    fontSize: 80,
+    fontSize: 120,
     fontWeight: '800',
     fontFamily: 'System',
     color: '#212121',

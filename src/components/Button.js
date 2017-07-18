@@ -128,15 +128,17 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 0,
+    borderRadius: 3,
     alignSelf: 'stretch',
     justifyContent: 'center',
+    backgroundColor: '#373C3E',
   },
   textButton: {
     flex: 1,
-    fontSize: 18,
+    fontSize: 20,
+    fontWeight: '800',
     textAlign: 'center',
-    backgroundColor: 'transparent',
+    color: 'white'
   },
   spinner: {
     alignSelf: 'center',

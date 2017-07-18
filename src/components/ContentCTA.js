@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   button: {
-    backgroundColor: 'blue',
     flex: 1,
+    margin: 2.5,
   },
   buttonStylePressing: {
     borderColor: 'red',

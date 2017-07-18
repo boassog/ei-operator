@@ -23,18 +23,18 @@ export default class ContentCTA extends Component {
     }
     return (
       <View style={styles.module}>
-      <Button style={styles.button}>
-        Auto
-      </Button>
-      <Button style={styles.button}>
-        Camioneta
-      </Button>
-      <Button style={styles.button}>
-        Moto
-      </Button>
-      <Button style={styles.button}>
-        Bici
-      </Button>
+        <Button style={styles.button}>
+          Auto
+        </Button>
+        <Button style={styles.button}>
+          Camioneta
+        </Button>
+        <Button style={styles.button}>
+          Moto
+        </Button>
+        <Button style={styles.button}>
+          Bici
+        </Button>
       </View>
     );
   }
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   button: {
-    backgroundColor: 'orange',
     flex: 1,
+    margin: 2.5,
   },
   buttonStylePressing: {
     borderColor: 'red',

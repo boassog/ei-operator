@@ -13,7 +13,6 @@ import ModuleRight from '../components/ModuleRight';
 import ContentType from '../components/ContentType';
 import ContentCTA from '../components/ContentCTA';
 
-
 export default class eioperator extends Component {
   constructor(props) {
     super(props);
@@ -68,7 +67,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#212121',
   },
   top: {
-    flex: 1,
+    // flex: 1,
+    height: 390,
     flexDirection: 'row',
     backgroundColor: '#212121',
   },
@@ -78,22 +78,29 @@ const styles = StyleSheet.create({
   sideLeft: {
     flex: 1,
     flexDirection: 'column',
+    paddingLeft: 2.5,
   },
   sideRight: {
     flex: 1,
+    paddingLeft: 2.5,
+    paddingRight: 5,
+    paddingBottom: 2.5,
   },
   contentField: {
     flex: 2,
-    padding: 20,
     backgroundColor: '#2F3335',
+    borderRadius: 3,
+    marginLeft: 2.5,
+    marginRight: 2.5,
+    marginBottom: 2.5,
   },
   contentType: {
     flex: 1,
-    backgroundColor: '#373C3E',
+    backgroundColor: '#212121',
   },
   contentCTA: {
     flex: 1,
-    backgroundColor: '#373C3E',
+    backgroundColor: '#212121',
   },
   field: {
     flex: 1,
