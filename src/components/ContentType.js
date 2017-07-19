@@ -23,7 +23,7 @@ export default class ContentCTA extends Component {
     }
     return (
       <View style={styles.module}>
-        <Button style={styles.button}>
+        <Button style={styles.button} onPress={this.props.onSelection.bind(this)}>
           Auto
         </Button>
         <Button style={styles.button}>

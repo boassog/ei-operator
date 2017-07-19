@@ -16,6 +16,7 @@ import AppStyles from '../Styles/styles';
 
 const Button = React.createClass({
   propTypes: {
+    text: PropTypes.string,
     textStyle: Text.propTypes.style,
     disabledStyle: Text.propTypes.style,
     children: PropTypes.oneOfType([

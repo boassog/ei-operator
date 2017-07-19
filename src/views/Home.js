@@ -17,10 +17,19 @@ import ContentType from '../components/ContentType';
 import ContentCTA from '../components/ContentCTA';
 
 export default class eioperator extends Component {
-  constructor(props) {
+  constructor (props: Object) {
     super(props);
-    this.state = { text: 'PATENTE' };
+    this.state = {
+      text: 'PATENTE',
+      status: 0
+    };
   }
+
+  onCarTypeSelection (item) {
+    console.log(this.state.status)
+    this.setState({ status: (this.state.status == 1) ? 0 : 1 })
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -46,14 +55,14 @@ export default class eioperator extends Component {
               />
             </View>
             <View style={styles.contentType}>
-              <ContentType></ContentType>
+              <ContentType onSelection={this.onCarTypeSelection.bind(this)}></ContentType>
             </View>
             <View style={styles.contentCTA}>
               <ContentCTA></ContentCTA>
             </View>
           </View>
           <View style={styles.sideRight}>
-            <ModuleRight></ModuleRight>
+            <ModuleRight status={this.state.status}></ModuleRight>
           </View>
         </View>
         <View style={styles.bottom}>
@@ -82,7 +91,6 @@ const styles = StyleSheet.create({
   },
   sideLeft: {
     flex: 1,
-    flexDirection: 'column',
     paddingLeft: 2.5,
   },
   sideRight: {
