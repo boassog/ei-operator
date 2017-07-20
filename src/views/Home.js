@@ -7,7 +7,7 @@ import {
   StatusBar,
   View,
   Keyboard,
-  Button
+  Button,
 } from 'react-native';
 
 import AppStyles from '../Styles/styles';

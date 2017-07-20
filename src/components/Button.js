@@ -131,9 +131,8 @@ const styles = StyleSheet.create({
   button: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: AppStyles.generalLayout.borderRadius,
-    alignSelf: 'stretch',
     justifyContent: 'center',
+    borderRadius: AppStyles.generalLayout.borderRadius,
     backgroundColor: '#373C3E',
   },
   textButton: {
