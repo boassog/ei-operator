@@ -80,7 +80,7 @@ export default class ModuleRight extends Component {
         </View>
         <View style={styles.bottom}>
           <Text style={styles.total}>
-            $ 38,00
+            $ 38.00
           </Text>
         </View>
       </View>
@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#BBC3C3',
   },
   hour: {
-    fontSize: 100,
-    fontWeight: '800',
-    fontFamily: 'System',
+    fontSize: 120,
+    fontFamily: 'Roboto',
+    fontWeight: '900',
     color: '#212121',
   },
   // Payment
   payment: {
-    backgroundColor: '#00B94A',
+    backgroundColor: '#00BD3F',
   },
   top: {
     flex: 1,
@@ -130,6 +130,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'flex-end',
+    backgroundColor: 'rgba(0, 0, 0, .08)',
+    borderBottomLeftRadius: AppStyles.generalLayout.borderRadius,
+    borderBottomRightRadius: AppStyles.generalLayout.borderRadius,
   },
   sideLeft: {
     flex: 1,
@@ -142,24 +145,27 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 18,
     fontWeight: 'bold',
+    fontFamily: 'Roboto',
     color: 'white',
     marginBottom: 10,
   },
   normal: {
     fontSize: 20,
     fontWeight: '600',
+    fontFamily: 'Roboto',
     color: 'white',
     marginBottom: 4,
   },
   dateHour: {
-    fontSize: 28,
-    fontWeight: '700',
+    fontSize: 30,
+    fontWeight: '800',
+    fontFamily: 'Roboto',
     color: 'white',
   },
   // Middle
   itemRow: {
     // flex: 1,
-    height: 35,
+    height: 40,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -169,11 +175,11 @@ const styles = StyleSheet.create({
   },
   // Total
   total: {
-    fontSize: 70,
+    fontSize: 80,
     paddingRight: 30,
     color: 'white',
     fontWeight: '700',
     textAlign: 'right',
-    // fontFamily: 'Avenir',
+    fontFamily: 'Roboto',
   }
 });

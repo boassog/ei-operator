@@ -117,10 +117,11 @@ const styles = StyleSheet.create({
   },
   field: {
     flex: 1,
-    fontSize: 80,
+    fontSize: 110,
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    fontFamily: 'License Plate',
     color: '#FFFFFF',
   },
 });
