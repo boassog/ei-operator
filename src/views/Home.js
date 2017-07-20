@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
+  Platform,
   TextInput,
   Text,
-  Platform,
   StatusBar,
   View,
-  Keyboard
+  Keyboard,
+  Button
 } from 'react-native';
 
 import AppStyles from '../Styles/styles';
-
 import ModuleRight from '../components/ModuleRight';
 import ContentType from '../components/ContentType';
 import ContentCTA from '../components/ContentCTA';
 
-export default class eioperator extends Component {
+export default class Home extends Component {
+
+  static navigationOptions = {
+    header: null
+  };
+
   constructor (props: Object) {
     super(props);
     this.state = {
@@ -125,5 +129,3 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 });
-
-AppRegistry.registerComponent('eioperator', () => eioperator);

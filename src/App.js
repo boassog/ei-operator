@@ -1,16 +1,19 @@
 import React from 'react';
-import Home from './views/Home';
-
 import {
-  Platform,
+  AppRegistry
 } from 'react-native';
 
-class App extends React.Component {
-  render() {
-    return (
-      <Home></Home>
-    );
-  }
-}
+import { StackNavigator } from 'react-navigation';
+
+// Views
+import Home from './views/Home';
+import LoginScreen from './views/LoginScreen';
+
+const App = StackNavigator({
+  Login: { screen: LoginScreen },
+  Home: { screen: Home },
+});
+
+AppRegistry.registerComponent('App', () => App);
 
 export default App;
