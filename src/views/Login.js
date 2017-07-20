@@ -6,13 +6,14 @@ import {
   TextInput,
   Keyboard,
   View,
+  StatusBar,
 } from 'react-native';
 
 import { StackNavigator } from 'react-navigation';
 
 import Button from '../components/Button';
 
-export default class LoginScreen extends React.Component {
+export default class Login extends React.Component {
   static navigationOptions = {
     header: null
   };
@@ -20,6 +21,9 @@ export default class LoginScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+      />
         <View style={styles.top}>
           <View style={styles.contentField}>
             <TextInput style = {styles.field}
@@ -49,7 +53,7 @@ export default class LoginScreen extends React.Component {
         <View style={styles.bottom}>
           <Button style={styles.button}
             onPress={() => navigate('Home')}
-          >
+            >
             Ingresar
           </Button>
         </View>

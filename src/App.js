@@ -7,10 +7,11 @@ import { StackNavigator } from 'react-navigation';
 
 // Views
 import Home from './views/Home';
-import LoginScreen from './views/LoginScreen';
+import Login from './views/Login';
+
 
 const App = StackNavigator({
-  Login: { screen: LoginScreen },
+  Login: { screen: Login },
   Home: { screen: Home },
 });
 

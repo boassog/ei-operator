@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Platform,
-  TextInput,
   Text,
-  StatusBar,
-  View,
+  TextInput,
   Keyboard,
-  Button,
+  View,
+  StatusBar,
 } from 'react-native';
 
 import AppStyles from '../Styles/styles';
@@ -37,9 +36,6 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar
-          barStyle="light-content"
-        />
         <View style={styles.top}>
           <View style={styles.sideLeft}>
             <View style={styles.contentField}>
