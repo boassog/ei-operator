@@ -9,8 +9,6 @@ import {
   StatusBar,
 } from 'react-native';
 
-import { StackNavigator } from 'react-navigation';
-
 import Button from '../components/Button';
 
 export default class Login extends React.Component {
