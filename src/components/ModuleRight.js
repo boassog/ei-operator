@@ -15,19 +15,12 @@ export default class ModuleRight extends Component {
     }
   }
   componentWillMount(){
-    if (this.props.status == 0){
-      var hourFormat = {hour: '2-digit', minute: '2-digit'};
-      this.timer = setInterval(function(){
-          this.setState({
-              curTime: new Date().toLocaleTimeString('en-GB', hourFormat)
-          })
-      }.bind(this), 1000);
-    }
+
   }
 
   componentWillUnmount() {
     if (this.props.status == 0){
-      clearInterval(this.timer);
+
     }
   }
 

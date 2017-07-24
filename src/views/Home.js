@@ -66,7 +66,7 @@ export default class Home extends Component {
   }
 
   onCarTypeSelection (value) {
-    console.log(this.state.carTypes[value])
+    // console.log(this.state.carTypes[value])
   }
 
   onOperationTypeSelection (value) {
@@ -86,7 +86,7 @@ export default class Home extends Component {
         const backAction = NavigationActions.back({
           routeName: 'Login'
         })
-        console.log(backAction)
+        // console.log(backAction)
         this.props.navigation.dispatch(backAction)
         break;
       default:

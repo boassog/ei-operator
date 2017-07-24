@@ -10,7 +10,7 @@ import Button from '../components/Button';
 export default class CTAButtons extends Component {
   constructor (props: Object) {
     super(props)
-    console.log(props)
+    // console.log(props)
   }
 
   onPress (value) {
